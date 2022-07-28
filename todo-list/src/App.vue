@@ -1,18 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">     
+    <div class="container">
+      <am-navbar :titleNavbar="'Lista de Tarefas 1.0'"></am-navbar>
+      <am-todo></am-todo>
+    </div>      
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AmTodo from './components/AmTodo.vue';
+import AmNavbar from './components/AmNavbar.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {    
+    AmNavbar,
+    AmTodo
+}
 }
 </script>
 
@@ -23,6 +27,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
